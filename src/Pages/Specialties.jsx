@@ -1,46 +1,30 @@
 import React, { useState } from "react";
 
-const specialties = [
+const specialists = [
   {
     id: 1,
-    title: "Nephrology",
-    subtitle: "Kidney Care",
-    description:
-      "Advanced diagnosis and treatment for kidney and urinary system conditions.",
-    image:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=85",
+    name: "Cardiology",
+    icon: "❤️",
+    description: "Heart and cardiovascular care",
     doctors: [
       {
         id: 101,
-        name: "Dr. Rahul Sharma",
-        qualification: "MBBS, MD, DM Nephrology",
-        experience: "12 Years",
-        hospital: "City Care Hospital",
-        fee: 800,
+        name: "Dr. Arjun Mehta",
+        qualification: "MBBS, MD, DM Cardiology",
+        experience: "14 Years",
+        hospital: "Healing Heart Hospital",
+        fee: 1200,
         image:
-          "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=85",
-      },
-      {
-        id: 102,
-        name: "Dr. Priya Singh",
-        qualification: "MBBS, MD Nephrology",
-        experience: "9 Years",
-        hospital: "Healing Hospital",
-        fee: 700,
-        image:
-          "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=500&q=85",
+          "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 
   {
     id: 2,
-    title: "Neurology",
-    subtitle: "Brain & Nerve Care",
-    description:
-      "Expert care for brain, spine, nerves, and neurological conditions.",
-    image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=90",
+    name: "Neurology",
+    icon: "🧠",
+    description: "Brain and nerve care",
     doctors: [
       {
         id: 201,
@@ -50,41 +34,35 @@ const specialties = [
         hospital: "Apollo Medical Center",
         fee: 1000,
         image:
-          "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=700&q=90",
+          "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 
   {
     id: 3,
-    title: "Cardiology",
-    subtitle: "Heart Care",
-    description:
-      "Comprehensive care for heart health and cardiovascular conditions.",
-    image:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=85",
+    name: "Nephrology",
+    icon: "🩺",
+    description: "Kidney and urinary care",
     doctors: [
       {
         id: 301,
-        name: "Dr. Arjun Mehta",
-        qualification: "MBBS, MD, DM Cardiology",
-        experience: "14 Years",
-        hospital: "Healing Heart Hospital",
-        fee: 1200,
+        name: "Dr. Rahul Sharma",
+        qualification: "MBBS, MD, DM Nephrology",
+        experience: "12 Years",
+        hospital: "City Care Hospital",
+        fee: 800,
         image:
-          "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=700&q=90",
+          "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 
   {
     id: 4,
-    title: "Pediatrics",
-    subtitle: "Child Care",
-    description:
-      "Gentle and compassionate healthcare for babies, children, and teens.",
-    image:
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=90",
+    name: "Pediatrics",
+    icon: "👶",
+    description: "Healthcare for children",
     doctors: [
       {
         id: 401,
@@ -94,19 +72,16 @@ const specialties = [
         hospital: "Sunrise Children's Hospital",
         fee: 600,
         image:
-          "https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=700&q=90",
+          "https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 
   {
     id: 5,
-    title: "Orthopedics",
-    subtitle: "Bone & Joint Care",
-    description:
-      "Specialized treatment for bones, joints, muscles, and mobility.",
-    image:
-      "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=700&q=90",
+    name: "Orthopedics",
+    icon: "🦴",
+    description: "Bone, joint and muscle care",
     doctors: [
       {
         id: 501,
@@ -116,19 +91,16 @@ const specialties = [
         hospital: "Apollo Medical Center",
         fee: 900,
         image:
-          "https://images.unsplash.com/photo-1622902046580-2b47f7f2f1c5?auto=format&fit=crop&w=700&q=90",
+          "https://images.unsplash.com/photo-1622902046580-2b47f7f2f1c5?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 
   {
     id: 6,
-    title: "Dentistry",
-    subtitle: "Dental Care",
-    description:
-      "Complete dental care for healthy teeth and a confident smile.",
-    image:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=90",
+    name: "Dentistry",
+    icon: "🦷",
+    description: "Complete dental care",
     doctors: [
       {
         id: 601,
@@ -138,45 +110,34 @@ const specialties = [
         hospital: "Smile Dental Center",
         fee: 500,
         image:
-          "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=700&q=90",
+          "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=500&q=85",
       },
     ],
   },
 ];
 
-const features = [
-  {
-    title: "Experienced Doctors",
-    description: "Connect with qualified healthcare professionals.",
-  },
-  {
-    title: "Easy Appointment",
-    description: "Book your appointment in just a few simple steps.",
-  },
-  {
-    title: "Quality Healthcare",
-    description: "Get personalized care according to your needs.",
-  },
-  {
-    title: "Safe & Trusted",
-    description: "Your information is handled with care.",
-  },
-];
+export default function Specialist() {
+  const [selectedSpecialist, setSelectedSpecialist] =
+    useState(null);
 
-export default function Specialties() {
-  const [selectedSpecialty, setSelectedSpecialty] = useState(null);
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
-  const [showBooking, setShowBooking] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedDoctor, setSelectedDoctor] =
+    useState(null);
+
+  const [showDetails, setShowDetails] =
+    useState(false);
+
+  const [showBooking, setShowBooking] =
+    useState(false);
+
+  const [booked, setBooked] =
+    useState(false);
 
   const [form, setForm] = useState({
-    name: "",
+    patientName: "",
     phone: "",
     date: "",
     time: "",
   });
-
-  const [booked, setBooked] = useState(false);
 
   const handleChange = (e) => {
     setForm({
@@ -185,47 +146,45 @@ export default function Specialties() {
     });
   };
 
-  const openDoctors = (specialty) => {
-    setSelectedSpecialty(specialty);
+  // Specialist select
+  const openSpecialist = (specialist) => {
+    setSelectedSpecialist(specialist);
     setShowDetails(false);
-    setSelectedDoctor(null);
   };
 
-  const openDetails = (doctor) => {
+  // Doctor details
+  const seeMore = (doctor) => {
     setSelectedDoctor(doctor);
     setShowDetails(true);
+    setShowBooking(false);
   };
 
-  const openBooking = (doctor) => {
+  // Booking
+  const bookDoctor = (doctor) => {
     setSelectedDoctor(doctor);
     setShowBooking(true);
-    setBooked(false);
-  };
-
-  const closeAll = () => {
-    setSelectedSpecialty(null);
-    setSelectedDoctor(null);
-    setShowBooking(false);
     setShowDetails(false);
     setBooked(false);
   };
 
-  const bookAppointment = (e) => {
+  // Submit appointment
+  const handleBooking = (e) => {
     e.preventDefault();
 
     const appointmentData = {
       doctorId: selectedDoctor.id,
       doctorName: selectedDoctor.name,
-      patientName: form.name,
+      patientName: form.patientName,
       phone: form.phone,
       date: form.date,
       time: form.time,
+      fee: selectedDoctor.fee,
     };
 
-    console.log("Appointment Data:", appointmentData);
+    console.log("Appointment:", appointmentData);
 
     /*
-      Backend ke liye baad mein:
+      Backend connect karne par:
 
       fetch("http://localhost:5000/api/appointments", {
         method: "POST",
@@ -239,80 +198,82 @@ export default function Specialties() {
     setBooked(true);
   };
 
+  const closePopup = () => {
+    setSelectedSpecialist(null);
+    setSelectedDoctor(null);
+    setShowDetails(false);
+    setShowBooking(false);
+    setBooked(false);
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
 
-      {/* =========================
-          SPECIALTIES
-      ========================== */}
+      {/* ================= HEADER ================= */}
 
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+
+        <div className="mx-auto max-w-7xl text-center">
+
+          <span className="rounded-full bg-[#2196d2]/10 px-4 py-2 text-sm font-semibold text-[#2196d2]">
+            ✦ Medical Specialists
+          </span>
+
+          <h1 className="mt-5 text-4xl font-bold text-slate-900 sm:text-5xl">
+            Find Your
+            <span className="text-[#2196d2]">
+              {" "}Specialist
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
+            Choose a medical specialist and find experienced
+            doctors for your healthcare needs.
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* ================= SPECIALISTS ================= */}
+
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
 
         <div className="mx-auto max-w-7xl">
 
-          <div className="mx-auto mb-14 max-w-3xl text-center">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-            <span className="rounded-full bg-[#2196d2]/10 px-4 py-2 text-sm font-semibold text-[#2196d2]">
-              ✦ Our Specialties
-            </span>
-
-            <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Specialized Care for
-              <span className="text-[#2196d2]">
-                {" "}Every Need
-              </span>
-            </h2>
-
-            <p className="mt-5 text-slate-600">
-              Find the right specialist and book your appointment easily.
-            </p>
-
-          </div>
-
-          {/* SPECIALTY CARDS */}
-
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-
-            {specialties.map((specialty) => (
+            {specialists.map((specialist) => (
 
               <div
-                key={specialty.id}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+                key={specialist.id}
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
 
-                <div className="h-60 overflow-hidden">
-
-                  <img
-                    src={specialty.image}
-                    alt={specialty.title}
-                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                  />
-
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#2196d2]/10 text-3xl">
+                  {specialist.icon}
                 </div>
 
-                <div className="p-6">
+                <h2 className="mt-5 text-2xl font-bold text-slate-900">
+                  {specialist.name}
+                </h2>
 
-                  <p className="text-sm font-semibold text-[#2196d2]">
-                    {specialty.subtitle}
-                  </p>
+                <p className="mt-2 text-slate-500">
+                  {specialist.description}
+                </p>
 
-                  <h3 className="mt-1 text-2xl font-bold text-slate-900">
-                    {specialty.title}
-                  </h3>
+                <p className="mt-4 text-sm font-semibold text-[#2196d2]">
+                  {specialist.doctors.length} Doctor Available
+                </p>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
-                    {specialty.description}
-                  </p>
-
-                  <button
-                    type="button"
-                    onClick={() => openDoctors(specialty)}
-                    className="mt-6 w-full rounded-xl bg-[#2196d2] py-3 font-semibold text-white hover:bg-[#1976b5]"
-                  >
-                    View Doctors →
-                  </button>
-
-                </div>
+                <button
+                  onClick={() =>
+                    openSpecialist(specialist)
+                  }
+                  className="mt-6 w-full rounded-xl bg-[#2196d2] py-3 font-semibold text-white hover:bg-[#1976b5]"
+                >
+                  View Doctors →
+                </button>
 
               </div>
 
@@ -324,101 +285,30 @@ export default function Specialties() {
 
       </section>
 
-      {/* =========================
-          WHY CHOOSE US
-      ========================== */}
+      {/* ================= DOCTOR POPUP ================= */}
 
-      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
-
-        <div className="mx-auto max-w-7xl">
-
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-
-            <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=90"
-              alt="Healthcare"
-              className="h-[400px] w-full rounded-3xl object-cover"
-            />
-
-            <div>
-
-              <span className="rounded-full bg-[#2196d2]/10 px-4 py-2 text-sm font-semibold text-[#2196d2]">
-                ✦ Why Choose Us
-              </span>
-
-              <h2 className="mt-5 text-4xl font-bold text-slate-900">
-                Better Healthcare,
-                <span className="text-[#2196d2]">
-                  {" "}Better Experience
-                </span>
-              </h2>
-
-              <p className="mt-5 leading-7 text-slate-600">
-                Find experienced doctors, view their details and book
-                appointments without any complicated process.
-              </p>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-
-                {features.map((feature) => (
-
-                  <div
-                    key={feature.title}
-                    className="rounded-2xl bg-slate-50 p-5"
-                  >
-
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2196d2] font-bold text-white">
-                      ✓
-                    </div>
-
-                    <h3 className="mt-4 font-bold text-slate-900">
-                      {feature.title}
-                    </h3>
-
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      {feature.description}
-                    </p>
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* =========================
-          DOCTORS POPUP
-      ========================== */}
-
-      {selectedSpecialty && !showBooking && (
+      {selectedSpecialist && !showBooking && (
 
         <div className="fixed inset-0 z-50 overflow-y-auto bg-black/50 p-4">
 
-          <div className="mx-auto mt-10 max-w-3xl rounded-3xl bg-white p-6 shadow-2xl">
+          <div className="mx-auto mt-10 max-w-2xl rounded-3xl bg-white p-6 shadow-2xl">
 
             <div className="flex items-center justify-between">
 
               <div>
 
                 <p className="text-sm font-semibold text-[#2196d2]">
-                  {selectedSpecialty.subtitle}
+                  Specialist
                 </p>
 
-                <h2 className="text-2xl font-bold text-slate-900">
-                  {selectedSpecialty.title} Doctors
+                <h2 className="text-2xl font-bold">
+                  {selectedSpecialist.name}
                 </h2>
 
               </div>
 
               <button
-                onClick={closeAll}
+                onClick={closePopup}
                 className="rounded-full bg-slate-100 px-4 py-2"
               >
                 ✕
@@ -426,60 +316,69 @@ export default function Specialties() {
 
             </div>
 
+            {/* DOCTORS */}
+
             <div className="mt-6 space-y-4">
 
-              {selectedSpecialty.doctors.map((doctor) => (
+              {selectedSpecialist.doctors.map(
+                (doctor) => (
 
-                <div
-                  key={doctor.id}
-                  className="rounded-2xl border border-slate-200 p-4"
-                >
+                  <div
+                    key={doctor.id}
+                    className="rounded-2xl border border-slate-200 p-4"
+                  >
 
-                  <div className="flex flex-col gap-4 sm:flex-row">
+                    <div className="flex flex-col gap-4 sm:flex-row">
 
-                    <img
-                      src={doctor.image}
-                      alt={doctor.name}
-                      className="h-28 w-full rounded-xl object-cover sm:w-28"
-                    />
+                      <img
+                        src={doctor.image}
+                        alt={doctor.name}
+                        className="h-28 w-full rounded-xl object-cover sm:w-28"
+                      />
 
-                    <div className="flex-1">
+                      <div className="flex-1">
 
-                      <h3 className="text-xl font-bold text-slate-900">
-                        {doctor.name}
-                      </h3>
+                        <h3 className="text-xl font-bold">
+                          {doctor.name}
+                        </h3>
 
-                      <p className="mt-1 text-sm text-[#2196d2]">
-                        {doctor.qualification}
-                      </p>
+                        <p className="mt-1 text-sm text-[#2196d2]">
+                          {doctor.qualification}
+                        </p>
 
-                      <p className="mt-2 text-sm text-slate-500">
-                        {doctor.experience} Experience
-                      </p>
+                        <p className="mt-2 text-sm text-slate-500">
+                          {doctor.experience} experience
+                        </p>
 
-                      <p className="text-sm text-slate-500">
-                        🏥 {doctor.hospital}
-                      </p>
+                        <p className="text-sm text-slate-500">
+                          🏥 {doctor.hospital}
+                        </p>
 
-                      <p className="mt-1 font-semibold text-slate-800">
-                        Consultation: ₹{doctor.fee}
-                      </p>
+                        <p className="mt-2 font-semibold">
+                          ₹{doctor.fee} consultation
+                        </p>
 
-                      <div className="mt-4 flex flex-wrap gap-3">
+                        <div className="mt-4 flex gap-3">
 
-                        <button
-                          onClick={() => openDetails(doctor)}
-                          className="rounded-xl border border-slate-200 px-5 py-2 text-sm font-semibold hover:border-[#2196d2] hover:text-[#2196d2]"
-                        >
-                          See More
-                        </button>
+                          <button
+                            onClick={() =>
+                              seeMore(doctor)
+                            }
+                            className="rounded-xl border px-5 py-2 text-sm font-semibold hover:border-[#2196d2] hover:text-[#2196d2]"
+                          >
+                            See More
+                          </button>
 
-                        <button
-                          onClick={() => openBooking(doctor)}
-                          className="rounded-xl bg-[#2196d2] px-5 py-2 text-sm font-semibold text-white hover:bg-[#1976b5]"
-                        >
-                          Book Appointment
-                        </button>
+                          <button
+                            onClick={() =>
+                              bookDoctor(doctor)
+                            }
+                            className="rounded-xl bg-[#2196d2] px-5 py-2 text-sm font-semibold text-white hover:bg-[#1976b5]"
+                          >
+                            Book Appointment
+                          </button>
+
+                        </div>
 
                       </div>
 
@@ -487,52 +386,55 @@ export default function Specialties() {
 
                   </div>
 
-                </div>
-
-              ))}
+                )
+              )}
 
             </div>
 
-            {/* DOCTOR DETAILS */}
+            {/* ================= DETAILS ================= */}
 
             {showDetails && selectedDoctor && (
 
               <div className="mt-6 rounded-2xl bg-blue-50 p-6">
 
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold">
                   Doctor Details
                 </h3>
 
-                <p className="mt-3 text-slate-600">
-                  <strong>Name:</strong>{" "}
-                  {selectedDoctor.name}
-                </p>
+                <div className="mt-4 space-y-2 text-sm text-slate-600">
 
-                <p className="mt-2 text-slate-600">
-                  <strong>Qualification:</strong>{" "}
-                  {selectedDoctor.qualification}
-                </p>
+                  <p>
+                    <strong>Name:</strong>{" "}
+                    {selectedDoctor.name}
+                  </p>
 
-                <p className="mt-2 text-slate-600">
-                  <strong>Experience:</strong>{" "}
-                  {selectedDoctor.experience}
-                </p>
+                  <p>
+                    <strong>Qualification:</strong>{" "}
+                    {selectedDoctor.qualification}
+                  </p>
 
-                <p className="mt-2 text-slate-600">
-                  <strong>Hospital:</strong>{" "}
-                  {selectedDoctor.hospital}
-                </p>
+                  <p>
+                    <strong>Experience:</strong>{" "}
+                    {selectedDoctor.experience}
+                  </p>
 
-                <p className="mt-2 text-slate-600">
-                  <strong>Consultation Fee:</strong>{" "}
-                  ₹{selectedDoctor.fee}
-                </p>
+                  <p>
+                    <strong>Hospital:</strong>{" "}
+                    {selectedDoctor.hospital}
+                  </p>
+
+                  <p>
+                    <strong>Consultation Fee:</strong>{" "}
+                    ₹{selectedDoctor.fee}
+                  </p>
+
+                </div>
 
                 <button
                   onClick={() =>
-                    openBooking(selectedDoctor)
+                    bookDoctor(selectedDoctor)
                   }
-                  className="mt-5 rounded-xl bg-[#2196d2] px-6 py-3 font-semibold text-white hover:bg-[#1976b5]"
+                  className="mt-5 rounded-xl bg-[#2196d2] px-6 py-3 font-semibold text-white"
                 >
                   Book This Doctor
                 </button>
@@ -547,105 +449,63 @@ export default function Specialties() {
 
       )}
 
-      {/* =========================
-          BOOKING POPUP
-      ========================== */}
+      {/* ================= BOOKING ================= */}
 
       {showBooking && selectedDoctor && (
 
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4">
 
-          <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl">
+          <div className="w-full max-w-lg rounded-3xl bg-white p-6">
 
-            <div className="flex items-center justify-between">
+            {!booked ? (
 
-              <div>
+              <>
 
-                <h2 className="text-2xl font-bold text-slate-900">
-                  Book Appointment
-                </h2>
+                <div className="flex justify-between">
 
-                <p className="mt-1 text-sm text-[#2196d2]">
-                  {selectedDoctor.name}
-                </p>
+                  <div>
 
-              </div>
+                    <h2 className="text-2xl font-bold">
+                      Book Appointment
+                    </h2>
 
-              <button
-                onClick={() => setShowBooking(false)}
-                className="rounded-full bg-slate-100 px-4 py-2"
-              >
-                ✕
-              </button>
+                    <p className="mt-1 text-sm text-[#2196d2]">
+                      {selectedDoctor.name}
+                    </p>
 
-            </div>
+                  </div>
 
-            {booked ? (
+                  <button
+                    onClick={closePopup}
+                    className="rounded-full bg-slate-100 px-4 py-2"
+                  >
+                    ✕
+                  </button>
 
-              <div className="py-10 text-center">
-
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-3xl text-green-600">
-                  ✓
                 </div>
 
-                <h3 className="mt-5 text-2xl font-bold">
-                  Appointment Booked!
-                </h3>
-
-                <p className="mt-2 text-slate-500">
-                  Your appointment request has been submitted.
-                </p>
-
-                <button
-                  onClick={closeAll}
-                  className="mt-6 rounded-xl bg-[#2196d2] px-8 py-3 font-semibold text-white"
+                <form
+                  onSubmit={handleBooking}
+                  className="mt-6 space-y-4"
                 >
-                  Done
-                </button>
-
-              </div>
-
-            ) : (
-
-              <form
-                onSubmit={bookAppointment}
-                className="mt-6 space-y-4"
-              >
-
-                <div>
-                  <label className="text-sm font-semibold">
-                    Patient Name
-                  </label>
 
                   <input
-                    name="name"
-                    value={form.name}
+                    name="patientName"
+                    value={form.patientName}
                     onChange={handleChange}
                     required
-                    placeholder="Enter your name"
-                    className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#2196d2]"
+                    placeholder="Patient Name"
+                    className="w-full rounded-xl border p-3 outline-none focus:border-[#2196d2]"
                   />
-                </div>
-
-                <div>
-                  <label className="text-sm font-semibold">
-                    Phone Number
-                  </label>
 
                   <input
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
                     required
-                    placeholder="Enter phone number"
-                    className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#2196d2]"
+                    placeholder="Phone Number"
+                    className="w-full rounded-xl border p-3 outline-none focus:border-[#2196d2]"
                   />
-                </div>
-
-                <div>
-                  <label className="text-sm font-semibold">
-                    Appointment Date
-                  </label>
 
                   <input
                     type="date"
@@ -653,24 +513,18 @@ export default function Specialties() {
                     value={form.date}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#2196d2]"
+                    className="w-full rounded-xl border p-3 outline-none focus:border-[#2196d2]"
                   />
-                </div>
-
-                <div>
-                  <label className="text-sm font-semibold">
-                    Appointment Time
-                  </label>
 
                   <select
                     name="time"
                     value={form.time}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none focus:border-[#2196d2]"
+                    className="w-full rounded-xl border bg-white p-3 outline-none focus:border-[#2196d2]"
                   >
                     <option value="">
-                      Select time
+                      Select Time
                     </option>
                     <option value="10:00 AM">
                       10:00 AM
@@ -691,32 +545,58 @@ export default function Specialties() {
                       5:00 PM
                     </option>
                   </select>
-                </div>
 
-                <div className="rounded-xl bg-slate-50 p-4">
+                  <div className="rounded-xl bg-slate-50 p-4">
 
-                  <div className="flex justify-between">
+                    <div className="flex justify-between">
 
-                    <span className="text-sm text-slate-500">
-                      Doctor Fee
-                    </span>
+                      <span className="text-slate-500">
+                        Doctor Fee
+                      </span>
 
-                    <span className="font-bold">
-                      ₹{selectedDoctor.fee}
-                    </span>
+                      <strong>
+                        ₹{selectedDoctor.fee}
+                      </strong>
+
+                    </div>
 
                   </div>
 
+                  <button
+                    type="submit"
+                    className="w-full rounded-xl bg-[#2196d2] py-3 font-bold text-white hover:bg-[#1976b5]"
+                  >
+                    Confirm Appointment
+                  </button>
+
+                </form>
+
+              </>
+
+            ) : (
+
+              <div className="py-10 text-center">
+
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-3xl text-green-600">
+                  ✓
                 </div>
 
+                <h2 className="mt-5 text-2xl font-bold">
+                  Appointment Booked
+                </h2>
+
+                <p className="mt-2 text-slate-500">
+                  Your appointment request has been submitted.
+                </p>
+
                 <button
-                  type="submit"
-                  className="w-full rounded-xl bg-[#2196d2] py-3.5 font-bold text-white hover:bg-[#1976b5]"
+                  onClick={closePopup}
+                  className="mt-6 rounded-xl bg-[#2196d2] px-8 py-3 font-semibold text-white"
                 >
-                  Confirm Appointment
+                  Done
                 </button>
 
-              </form>
+              </div>
 
             )}
 
@@ -727,5 +607,6 @@ export default function Specialties() {
       )}
 
     </div>
+    
   );
 }
