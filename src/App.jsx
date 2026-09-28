@@ -18,7 +18,7 @@ function App() {
         <Route path="/specialties" element={<Specialties />} />
 
         <Route path="/hospital" element={<Hospital />} />
-        <Route path="/admin" element={<Admin />} />
+   <Route path="/admin" element={<Admin />} />
        </Routes>
     </BrowserRouter>
   );
