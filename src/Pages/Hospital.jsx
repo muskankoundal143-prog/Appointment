@@ -9,7 +9,7 @@ const Hospital = () => {
       image:
         "https://images.unsplash.com/photo-1586773860418-d37222d8fce3",
       location: "Mohali, Punjab",
-      rating: 4.8,
+     
       reviews: 245,
       phone: "+91 98765 43210",
       email: "citycare@gmail.com",
@@ -40,7 +40,6 @@ const Hospital = () => {
       image:
         "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d",
       location: "Chandigarh",
-      rating: 4.7,
       reviews: 189,
       phone: "+91 98765 12345",
       email: "healingheart@gmail.com",
@@ -70,7 +69,7 @@ const Hospital = () => {
       image:
         "https://images.unsplash.com/photo-1538108149393-fbbd81895907",
       location: "Kharar, Punjab",
-      rating: 4.6,
+     
       reviews: 156,
       phone: "+91 98765 67890",
       email: "apollo@example.com",

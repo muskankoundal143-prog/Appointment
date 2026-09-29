@@ -50,7 +50,7 @@ export default function Home() {
               </div>
 
               <Link
-                to="/doctor"
+                to="/specialties"
                 className="rounded-lg bg-[#2196d2] px-5 py-3 text-xs font-semibold text-white transition hover:bg-[#1686c2]"
               >
                 Search

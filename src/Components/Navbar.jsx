@@ -59,10 +59,10 @@ export default function Navbar() {
         <div className="hidden md:block">
 
           <Link
-            to="/specialties"
+            to="/appointment"
             className="rounded-xl bg-[#2196d2] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1686c2] hover:shadow-md"
           >
-            Find Doctor
+        Book Appointment
           </Link>
 
         </div>
@@ -124,11 +124,11 @@ export default function Navbar() {
             <div className="pt-2">
 
               <Link
-                to="/specailties"
+                to="/appointment"
                 onClick={() => setMenuOpen(false)}
                 className="block rounded-xl bg-[#2196d2] px-4 py-3 text-center text-sm font-semibold text-white shadow-sm"
               >
-                Find a Doctor →
+                Book Appointment →
               </Link>
 
             </div>

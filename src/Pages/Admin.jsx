@@ -43,7 +43,7 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-gray-100">
 
-      {/* ================= SIDEBAR ================= */}
+     
       <aside className="fixed left-0 top-0 z-20 h-screen w-64 bg-gray-900 p-5 text-white">
 
         <h1 className="mb-8 text-2xl font-bold">
@@ -52,7 +52,7 @@ const Admin = () => {
 
         <nav className="space-y-2">
 
-          {/* Dashboard */}
+       
           <button
             onClick={() => setActiveMenu("dashboard")}
             className={`w-full rounded-lg px-4 py-3 text-left ${
@@ -64,7 +64,7 @@ const Admin = () => {
              Dashboard
           </button>
 
-          {/* Users */}
+      
           <div>
             <button
               onClick={() => {
@@ -84,7 +84,6 @@ const Admin = () => {
               </span>
             </button>
 
-            {/* Users Dropdown */}
             {usersOpen && (
               <div className="mt-1 ml-4 space-y-1">
 
@@ -113,7 +112,6 @@ const Admin = () => {
             )}
           </div>
 
-          {/* Products */}
           <button
             onClick={() => setActiveMenu("products")}
             className={`w-full rounded-lg px-4 py-3 text-left ${
@@ -125,7 +123,7 @@ const Admin = () => {
              Products
           </button>
 
-          {/* Orders */}
+        
           <button
             onClick={() => setActiveMenu("orders")}
             className={`w-full rounded-lg px-4 py-3 text-left ${
@@ -137,7 +135,7 @@ const Admin = () => {
              Orders
           </button>
 
-          {/* Settings */}
+         
           <button
             onClick={() => setActiveMenu("settings")}
             className={`w-full rounded-lg px-4 py-3 text-left ${
@@ -149,7 +147,6 @@ const Admin = () => {
              Settings
           </button>
 
-          {/* Logout */}
           <button
             onClick={() => alert("Logout clicked")}
             className="mt-8 w-full rounded-lg px-4 py-3 text-left text-red-400 hover:bg-red-500 hover:text-white"
@@ -160,10 +157,10 @@ const Admin = () => {
         </nav>
       </aside>
 
-      {/* ================= MAIN ================= */}
+   
       <main className="ml-64 min-h-screen p-8">
 
-        {/* Header */}
+   
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h2 className="text-3xl font-bold text-gray-800">
@@ -187,7 +184,7 @@ const Admin = () => {
           </div>
         </div>
 
-        {/* ================= DASHBOARD ================= */}
+   
         {activeMenu === "dashboard" && (
           <>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -244,7 +241,6 @@ const Admin = () => {
           </>
         )}
 
-        {/* ================= ALL USERS ================= */}
         {(activeMenu === "users" ||
           activeMenu === "all-users") && (
           <div className="rounded-xl bg-white p-6 shadow">
@@ -270,7 +266,7 @@ const Admin = () => {
 
             </div>
 
-            {/* Search */}
+        
             <input
               type="text"
               placeholder="Search users..."
@@ -279,7 +275,7 @@ const Admin = () => {
               className="mb-5 w-full rounded-lg border px-4 py-3 outline-none focus:border-blue-500"
             />
 
-            {/* Table */}
+     
             <div className="overflow-x-auto">
 
               <table className="w-full text-left">
@@ -349,7 +345,6 @@ const Admin = () => {
           </div>
         )}
 
-        {/* ================= ADD USER ================= */}
         {activeMenu === "add-user" && (
           <div className="max-w-2xl rounded-xl bg-white p-6 shadow">
 
@@ -430,7 +425,7 @@ const Admin = () => {
           </div>
         )}
 
-        {/* ================= ROLES ================= */}
+   
         {activeMenu === "roles" && (
           <div className="rounded-xl bg-white p-6 shadow">
 
@@ -471,7 +466,7 @@ const Admin = () => {
           </div>
         )}
 
-        {/* ================= PRODUCTS ================= */}
+      
         {activeMenu === "products" && (
           <div className="rounded-xl bg-white p-8 shadow">
             <h3 className="text-xl font-bold">
@@ -484,7 +479,7 @@ const Admin = () => {
           </div>
         )}
 
-        {/* ================= ORDERS ================= */}
+       
         {activeMenu === "orders" && (
           <div className="rounded-xl bg-white p-8 shadow">
             <h3 className="text-xl font-bold">
@@ -497,7 +492,6 @@ const Admin = () => {
           </div>
         )}
 
-        {/* ================= SETTINGS ================= */}
         {activeMenu === "settings" && (
           <div className="rounded-xl bg-white p-8 shadow">
             <h3 className="text-xl font-bold">
