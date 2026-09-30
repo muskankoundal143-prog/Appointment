@@ -8,6 +8,8 @@ import Specialties from "./Pages/Specialties";
 import Hospital from "./Pages/Hospital";
 import Admin from "./Pages/Admin";
 import Appointment from "./Pages/Appointment";
+import Doctor from "./Pages/Doctor";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/specialties" element={<Specialties />} />
         <Route path="/hospital" element={<Hospital />} />
         <Route path="/admin" element={<Admin />} />
+         <Route path="/doctor" element={<Doctor />} />
+            <Route path="/contact" element={<Contact />} />
         <Route path="/appointment" element={<Appointment />} />
       </Routes>
     </BrowserRouter>

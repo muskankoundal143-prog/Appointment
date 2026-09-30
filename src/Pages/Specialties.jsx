@@ -183,18 +183,7 @@ export default function Specialist() {
 
     console.log("Appointment:", appointmentData);
 
-    /*
-      Backend connect karne par:
-
-      fetch("http://localhost:5000/api/appointments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(appointmentData),
-      });
-    */
-
+  
     setBooked(true);
   };
 

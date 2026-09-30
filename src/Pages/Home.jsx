@@ -11,7 +11,7 @@ export default function Home() {
 
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
 
-  
+
 
           <div>
 
@@ -31,7 +31,7 @@ export default function Home() {
               for your health needs — all in one place.
             </p>
 
-      
+
 
             <div className="mt-7 flex max-w-xl rounded-xl bg-white p-1.5 shadow-md">
 
@@ -89,7 +89,7 @@ export default function Home() {
               </span>
 
               <span>
-                <b className="text-[#2196d2]">✓</b> Trusted Care
+                <b className="text-[#a0d3ec]">✓</b> Trusted Care
               </span>
 
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
 
 
-  
+
 
           <div className="relative mx-auto w-full max-w-md">
 
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
 
- 
+
 
             <div className="absolute right-2 top-8 rounded-2xl bg-white px-4 py-3 shadow-lg">
 
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
 
-                                                
+
 
       <section className="bg-white">
 
@@ -238,7 +238,7 @@ export default function Home() {
       </section>
 
 
- 
+
 
       <section className="bg-white px-6 py-14">
 
@@ -421,8 +421,7 @@ export default function Home() {
         </div>
 
       </section>
-
-    </div>
+  </div>
   );
 }
 
@@ -508,10 +507,10 @@ function DoctorCard({
         </p>
 
         <Link
-          to="/doctor"
+          to="/appointment"
           className="mt-4 block rounded-lg bg-[#2196d2] py-2.5 text-center text-xs font-semibold text-white hover:bg-[#1686c2]"
         >
-          View Profile
+         Book Appointment
         </Link>
 
       </div>
