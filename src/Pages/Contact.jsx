@@ -177,14 +177,10 @@ export default function ContactUs() {
               </div>
 
 
-              {/* Emergency Box */}
               <div className="mt-8 rounded-2xl border border-red-100 bg-red-50 p-5">
 
                 <div className="flex gap-4">
 
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-100 text-xl">
-                    🚨
-                  </div>
 
                   <div>
                     <h3 className="font-bold text-red-700">
@@ -205,7 +201,7 @@ export default function ContactUs() {
             </div>
 
 
-            {/* Form */}
+          
             <div className="rounded-3xl border border-[#e5f4fb] bg-white p-6 shadow-xl shadow-[#d9effa]/40 sm:p-8">
 
               <div>
@@ -228,7 +224,7 @@ export default function ContactUs() {
                 className="mt-7 space-y-5"
               >
 
-                {/* Name */}
+            
                 <div>
 
                   <label
@@ -252,7 +248,6 @@ export default function ContactUs() {
                 </div>
 
 
-                {/* Email + Phone */}
                 <div className="grid gap-5 sm:grid-cols-2">
 
                   <div>
@@ -303,7 +298,7 @@ export default function ContactUs() {
                 </div>
 
 
-                {/* Message */}
+           
                 <div>
 
                   <label
@@ -327,7 +322,7 @@ export default function ContactUs() {
                 </div>
 
 
-                {/* Submit */}
+           
                 <button
                   type="submit"
                   className="w-full rounded-xl bg-[#2196d2] px-6 py-3.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1686c2] hover:shadow-lg"
@@ -350,7 +345,6 @@ export default function ContactUs() {
       </section>
 
 
-      {/* ================= CTA ================= */}
       <section className="bg-[#2196d2]">
         <div className="mx-auto max-w-7xl px-5 py-16 text-center md:px-8">
 
@@ -389,14 +383,13 @@ export default function ContactUs() {
       </section>
 
 
-      {/* ================= FOOTER ================= */}
       <footer className="bg-slate-950 text-slate-400">
 
         <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
 
           <div className="grid gap-10 md:grid-cols-4">
 
-            {/* Brand */}
+          
             <div className="md:col-span-2">
 
               <Link
@@ -443,7 +436,6 @@ export default function ContactUs() {
             </div>
 
 
-            {/* Quick Links */}
             <div>
 
               <h3 className="font-semibold text-white">
@@ -493,7 +485,7 @@ export default function ContactUs() {
             </div>
 
 
-            {/* Contact */}
+           
             <div>
 
               <h3 className="font-semibold text-white">
@@ -503,17 +495,17 @@ export default function ContactUs() {
               <ul className="mt-5 space-y-4 text-sm">
 
                 <li className="flex gap-3">
-                  <span>📞</span>
+            
                   <span>+91 98765 43210</span>
                 </li>
 
                 <li className="flex gap-3">
-                  <span>✉️</span>
+             
                   <span>hello@healthcare.com</span>
                 </li>
 
                 <li className="flex gap-3">
-                  <span>📍</span>
+                 
                   <span>Chandigarh, India</span>
                 </li>
 
@@ -524,7 +516,7 @@ export default function ContactUs() {
           </div>
 
 
-          {/* Bottom */}
+       
           <div className="mt-12 flex flex-col gap-4 border-t border-slate-800 pt-8 text-center text-xs sm:flex-row sm:items-center sm:justify-between sm:text-left">
 
             <p>
@@ -553,10 +545,9 @@ export default function ContactUs() {
 }
 
 
-/* ================= CONTACT CARD ================= */
 
 function ContactCard({
-  icon,
+ 
   title,
   text,
   subText,
@@ -573,15 +564,7 @@ function ContactCard({
 
       <div className="flex items-start gap-4">
 
-        <div
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl ${
-            emergency
-              ? "bg-red-100"
-              : "bg-[#e8f7ff]"
-          }`}
-        >
-          {icon}
-        </div>
+        
 
         <div>
           <h3 className="font-bold text-slate-900">
@@ -610,7 +593,7 @@ function ContactCard({
 }
 
 
-/* ================= INFO ITEM ================= */
+
 
 function InfoItem({ icon, title, text }) {
   return (
@@ -635,7 +618,7 @@ function InfoItem({ icon, title, text }) {
 }
 
 
-/* ================= SOCIAL BUTTON ================= */
+
 
 function SocialButton({ text }) {
   return (

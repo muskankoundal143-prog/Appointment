@@ -537,6 +537,7 @@ function Feature({ icon, title, text }) {
       </p>
 
     </div>
+    
   );
 }
 
