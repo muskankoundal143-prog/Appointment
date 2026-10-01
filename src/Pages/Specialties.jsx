@@ -225,7 +225,6 @@ export default function Specialties() {
   return (
     <div className="min-h-screen bg-slate-50">
 
-      {/* ================= HERO ================= */}
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -294,7 +293,6 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= SPECIALTIES ================= */}
 
       <section
         id="specialties"
@@ -377,7 +375,6 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= WHY CHOOSE US ================= */}
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
 
@@ -457,7 +454,6 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= HEALTHCARE IMAGE ================= */}
 
       <section className="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
 
@@ -526,7 +522,7 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= HOW IT WORKS ================= */}
+
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
 
@@ -601,7 +597,7 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= POPULAR TREATMENTS ================= */}
+
 
       <section className="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
 
@@ -661,7 +657,6 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= FAQ ================= */}
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
 
@@ -724,7 +719,7 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= CTA ================= */}
+
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
 
@@ -848,8 +843,6 @@ export default function Specialties() {
 
       </footer>
 
-
-      {/* ================= DOCTOR POPUP ================= */}
 
       {selectedSpecialty && !showBooking && (
 
@@ -1005,7 +998,6 @@ export default function Specialties() {
       )}
 
 
-      {/* ================= BOOKING MODAL ================= */}
 
       {showBooking && selectedDoctor && (
 

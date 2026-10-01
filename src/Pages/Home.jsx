@@ -421,6 +421,96 @@ export default function Home() {
         </div>
 
       </section>
+      <footer className="bg-slate-900 text-white">
+
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+
+          <div className="grid gap-10 md:grid-cols-4">
+
+            <div>
+              <h2 className="text-2xl font-bold">
+              Health
+                <span className="text-[#2196d2]">
+                  Care
+                </span>
+              </h2>
+
+              <p className="mt-4 text-sm leading-6 text-slate-400">
+                Find experienced medical specialists
+                and book appointments easily.
+              </p>
+            </div>
+
+
+            <div>
+              <h3 className="font-semibold">
+                Quick Links
+              </h3>
+
+              <ul className="mt-4 space-y-3 text-sm text-slate-400">
+                <li>Home</li>
+                <li>Specialties</li>
+                <li>Doctors</li>
+                <li>Appointments</li>
+              </ul>
+            </div>
+
+
+            <div>
+              <h3 className="font-semibold">
+                Specialties
+              </h3>
+
+              <ul className="mt-4 space-y-3 text-sm text-slate-400">
+                <li>Cardiology</li>
+                <li>Neurology</li>
+                <li>Nephrology</li>
+                <li>Dermatology</li>
+              </ul>
+            </div>
+
+
+            <div>
+              <h3 className="font-semibold">
+                Contact Us
+              </h3>
+
+              <div className="mt-4 space-y-3 text-sm text-slate-400">
+                <p> Chandigarh, India</p>
+                <p> +91 98765 43210</p>
+                <p> support@medicare.com</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div className="mt-10 border-t border-slate-700 pt-6">
+
+            <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 sm:flex-row">
+
+              <p>
+                © {new Date().getFullYear()} MediCare.
+                All rights reserved.
+              </p>
+
+              <div className="flex gap-6">
+                <span className="cursor-pointer hover:text-[#2196d2]">
+                  Privacy Policy
+                </span>
+
+                <span className="cursor-pointer hover:text-[#2196d2]">
+                  Terms & Conditions
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
   </div>
   );
 }
