@@ -750,8 +750,7 @@ export default function Specialties() {
       </section>
 
 
-      {/* ================= FOOTER ================= */}
-
+  
       <footer className="bg-slate-900 text-white">
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
