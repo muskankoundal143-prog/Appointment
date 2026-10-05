@@ -97,7 +97,7 @@ const specialties = [
         hospital: "Apollo Medical Center",
         fee: 900,
         image:
-          "https://images.unsplash.com/photo-1622902046580-2b47f7f2f1c5?auto=format&fit=crop&w=500&q=85",
+          "https://plus.unsplash.com/premium_photo-1661492071612-98d26885614a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG9ydGhvcGVkaWNzJTIwZG9jdG9yfGVufDB8fDB8fHww",
       },
     ],
   },

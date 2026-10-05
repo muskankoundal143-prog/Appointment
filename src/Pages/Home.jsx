@@ -32,33 +32,6 @@ export default function Home() {
             </p>
 
 
-
-            <div className="mt-7 flex max-w-xl rounded-xl bg-white p-1.5 shadow-md">
-
-              <div className="flex flex-1 items-center gap-2 px-3">
-
-                <span className="text-[#5bb8e8]">
-                  🔍
-                </span>
-
-                <input
-                  type="text"
-                  placeholder="Search doctor or specialty"
-                  className="w-full bg-transparent text-sm outline-none placeholder:text-slate-400"
-                />
-
-              </div>
-
-              <Link
-                to="/specialties"
-                className="rounded-lg bg-[#2196d2] px-5 py-3 text-xs font-semibold text-white transition hover:bg-[#1686c2]"
-              >
-                Search
-              </Link>
-
-            </div>
-
-
             <div className="mt-5 flex flex-wrap gap-3">
 
               <Link
