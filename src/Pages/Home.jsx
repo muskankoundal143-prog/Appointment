@@ -32,36 +32,9 @@ export default function Home() {
             </p>
 
 
+       <div className="mt-5 flex flex-wrap gap-3">
 
-            <div className="mt-7 flex max-w-xl rounded-xl bg-white p-1.5 shadow-md">
-
-              <div className="flex flex-1 items-center gap-2 px-3">
-
-                <span className="text-[#5bb8e8]">
-                  🔍
-                </span>
-
-                <input
-                  type="text"
-                  placeholder="Search doctor or specialty"
-                  className="w-full bg-transparent text-sm outline-none placeholder:text-slate-400"
-                />
-
-              </div>
-
-              <Link
-                to="/specialties"
-                className="rounded-lg bg-[#2196d2] px-5 py-3 text-xs font-semibold text-white transition hover:bg-[#1686c2]"
-              >
-                Search
-              </Link>
-
-            </div>
-
-
-            <div className="mt-5 flex flex-wrap gap-3">
-
-              <Link
+       <Link 
                 to="/specialties"
                 className="rounded-lg bg-[#2196d2] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#1686c2]"
               >
@@ -76,8 +49,7 @@ export default function Home() {
               </Link>
 
             </div>
-
-
+ 
             <div className="mt-7 flex flex-wrap gap-5 text-xs text-slate-500">
 
               <span>
@@ -305,8 +277,7 @@ export default function Home() {
 
 
       <section className="bg-[#eef8ff] px-6 py-14">
-
-        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
+  <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
 
           <div>
 
@@ -478,7 +449,7 @@ export default function Home() {
               <div className="mt-4 space-y-3 text-sm text-slate-400">
                 <p> Chandigarh, India</p>
                 <p> +91 98765 43210</p>
-                <p> support@medicare.com</p>
+                <p> support@healthcare.com</p>
               </div>
             </div>
 
@@ -490,7 +461,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 sm:flex-row">
 
               <p>
-                © {new Date().getFullYear()} MediCare.
+                © {new Date().getFullYear()} HealthCare.
                 All rights reserved.
               </p>
 

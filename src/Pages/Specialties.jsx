@@ -808,7 +808,7 @@ export default function Specialties() {
               <div className="mt-4 space-y-3 text-sm text-slate-400">
                 <p> Chandigarh, India</p>
                 <p> +91 98765 43210</p>
-                <p> support@medicare.com</p>
+                <p> support@healthcare.com</p>
               </div>
             </div>
 
@@ -820,7 +820,7 @@ export default function Specialties() {
             <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 sm:flex-row">
 
               <p>
-                © {new Date().getFullYear()} MediCare.
+                © {new Date().getFullYear()} HealthCare.
                 All rights reserved.
               </p>
 

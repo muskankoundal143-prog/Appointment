@@ -741,15 +741,15 @@ const Hospital = () => {
 
               <div className="mt-4 space-y-3 text-sm text-slate-400">
                 <p> +91 98765 43210</p>
-                <p> support@medicare.com</p>
-                <p> Punjab, India</p>
+                <p> support@healthcare.com</p>
+                <p> Chandigarh, India</p>
               </div>
             </div>
 
           </div>
 
           <div className="mt-10 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
-            © 2026 MediCare. All rights reserved.
+            © 2026 HealthCare. All rights reserved.
           </div>
 
         </div>
